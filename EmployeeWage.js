@@ -1,11 +1,19 @@
-const wagePerHr = 20;
-const hrsInDay = 8;
-var empCheck = Math.floor(Math.random() * 2);
-if(empCheck == 1){
-    console.log("Employee is Present ");
-} 
-else{
-    console.log("Employee is Absent ");
+const WAGE_PER_HR = 20;
+const IS_FULL_TIME = 1;
+const IS_PART_TIME = 2;
+var hrsInDay;
+var empCheck = Math.floor(Math.random() * 3);
+switch(empCheck){
+    case IS_FULL_TIME: 
+        hrsInDay = 8;
+        break;
+    case IS_PART_TIME:
+        hrsInDay = 4;
+        break;
+    default:
+        hrsInDay = 0;
+        break;
+
 }
-var dailyWage = wagePerHr * hrsInDay * empCheck;
+var dailyWage = WAGE_PER_HR * hrsInDay ;
 console.log("Daily Employee Wage : " + dailyWage);
