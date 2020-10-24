@@ -13,7 +13,6 @@ switch(empCheck){
     default:
         hrsInDay = 0;
         break;
-
 }
-var dailyWage = WAGE_PER_HR * hrsInDay ;
+var dailyWage = WAGE_PER_HR * hrsInDay;
 console.log("Daily Employee Wage : " + dailyWage);
