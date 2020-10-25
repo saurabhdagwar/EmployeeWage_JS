@@ -20,11 +20,10 @@ for(var day =0;day < TOTAL_MONTHLY_DAYS;day ++){
             hrsInDay = 0;
             break;
     }
-    if(totalHrs >= 100 ){
-        break;
+    if(totalHrs <= 100 ){
+        var dailyWage = WAGE_PER_HR * hrsInDay;
+        monthlyWage = monthlyWage + dailyWage;
+        totalHrs = totalHrs + hrsInDay;
     }
-var dailyWage = WAGE_PER_HR * hrsInDay;
-monthlyWage = monthlyWage + dailyWage;
-totalHrs = totalHrs + hrsInDay;
 }
 console.log("Monthly Employee Wage : " + monthlyWage);
