@@ -7,6 +7,7 @@ var hrsInDay;
 var monthlyWage = 0;
 var totalHrs = 0;
 var day = 0;
+function WageCalculator(){
 for(var day =0;day < TOTAL_MONTHLY_DAYS;day ++){
     var empCheck = Math.floor(Math.random() * 3);
     switch(empCheck){
@@ -22,8 +23,12 @@ for(var day =0;day < TOTAL_MONTHLY_DAYS;day ++){
     }
     if(totalHrs <= 100 ){
         var dailyWage = WAGE_PER_HR * hrsInDay;
+        console.log(day+"Wage : "+dailyWage);
         monthlyWage = monthlyWage + dailyWage;
         totalHrs = totalHrs + hrsInDay;
     }
 }
 console.log("Monthly Employee Wage : " + monthlyWage);
+console.log("Total Working Hrs: " +totalHrs);
+}
+WageCalculator();
