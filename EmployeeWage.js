@@ -23,8 +23,8 @@ for(var day =0;day < TOTAL_MONTHLY_DAYS;day ++){
     }
     if(totalHrs <= 100 ){
         var dailyWage = WAGE_PER_HR * hrsInDay;
-        console.log(day+"Wage : "+dailyWage);
         monthlyWage = monthlyWage + dailyWage;
+        console.log("Day:"+day+" | Daily Wage : "+dailyWage+ " | Total Wage : "+monthlyWage);
         totalHrs = totalHrs + hrsInDay;
     }
 }
